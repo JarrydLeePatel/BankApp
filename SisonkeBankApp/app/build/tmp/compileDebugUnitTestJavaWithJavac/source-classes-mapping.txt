@@ -1,0 +1,2 @@
+com/example/sisonkebankapp/ExampleUnitTest.java
+ com.example.sisonkebankapp.ExampleUnitTest

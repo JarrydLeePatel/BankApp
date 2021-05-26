@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:padding="20dp"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="312dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="41dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/txtLoginWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/sisonkeWelcomMessage"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtLoginWelcome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:autofillHints="@string/txtEmailAddress"
+            android:hint="@string/txtEmailAddress"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:autofillHints="@string/password"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_marginTop="21dp"
+            android:background="@color/colorPrimary"
+            android:onClick="processLogin"
+            android:text="@string/login"
+            android:textColor="@android:color/background_light"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnCreateAccount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:onClick="processRegistration"
+            android:text="@string/txtRegisterHere"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@android:color/background_dark" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="345dp"
+        android:layout_height="196dp"
+        android:background="@android:color/background_light"
+        android:contentDescription="@string/generalLogoDescription"
+        android:src="@mipmap/sisonkelogo"
+        tools:ignore="HardcodedText" />
+</RelativeLayout>
